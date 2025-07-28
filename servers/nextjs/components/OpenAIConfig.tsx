@@ -1,3 +1,6 @@
+import { Input } from './ui/input';
+import { Label } from './ui/label';
+
 interface OpenAIConfigProps {
   openaiApiKey: string;
   onInputChange: (value: string, field: string) => void;
@@ -5,22 +8,21 @@ interface OpenAIConfigProps {
 
 export default function OpenAIConfig({ openaiApiKey, onInputChange }: OpenAIConfigProps) {
   return (
-    <div className="mb-8">
-      <label className="block text-sm font-medium text-gray-700 mb-2">
+    <div className="mb-8 space-y-2">
+      <Label htmlFor="openai-api-key">
         OpenAI API Key
-      </label>
-      <div className="relative">
-        <input
-          type="text"
-          value={openaiApiKey}
-          onChange={(e) => onInputChange(e.target.value, "openai_api_key")}
-          className="w-full px-4 py-2.5 outline-none border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-colors"
-          placeholder="Enter your API key"
-        />
-      </div>
-      <p className="mt-2 text-sm text-gray-500 flex items-center gap-2">
-        <span className="block w-1 h-1 rounded-full bg-gray-400"></span>
-        Your API key will be stored locally and never shared
+      </Label>
+      <Input
+        id="openai-api-key"
+        type="text"
+        value={openaiApiKey}
+        onChange={(e) => onInputChange(e.target.value, "openai_api_key")}
+        placeholder="sk-..."
+        className="font-mono"
+      />
+      <p className="text-sm text-muted-foreground flex items-center gap-2">
+        <span className="block w-1 h-1 rounded-full bg-muted-foreground"></span>
+        Ihr API-Schlüssel wird lokal gespeichert und niemals geteilt
       </p>
     </div>
   );

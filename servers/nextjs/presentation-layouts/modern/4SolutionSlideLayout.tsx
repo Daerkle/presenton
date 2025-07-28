@@ -110,13 +110,13 @@ const SolutionSlideLayout: React.FC<SolutionSlideLayoutProps> = ({
       />
 
       <div
-        className="w-full rounded-sm max-w-[1280px] shadow-lg  aspect-video bg-white relative z-20 mx-auto overflow-hidden border-2 border-gray-800"
+        className="w-full rounded-sm max-w-[1280px] shadow-lg  aspect-video bg-white dark:bg-gray-900 relative z-20 mx-auto overflow-hidden border-2 border-gray-800"
         style={{
           fontFamily: "Montserrat, sans-serif",
         }}
       >
         {/* Header */}
-        <div className="absolute top-8 left-10 right-10 flex justify-between items-center text-[#1E4CD9] text-sm font-semibold">
+        <div className="absolute top-8 left-10 right-10 flex justify-between items-center text-blue-600 dark:text-blue-400 text-sm font-semibold">
           <span>{slideData?.companyName}</span>
           <span>{slideData?.date}</span>
         </div>
@@ -137,7 +137,7 @@ const SolutionSlideLayout: React.FC<SolutionSlideLayoutProps> = ({
             {sections.map((section, idx) => (
               <div
                 key={idx}
-                className="flex flex-col items-center text-center bg-[#F5F8FE] rounded-lg shadow px-3 py-4 "
+                className="flex flex-col items-center text-center bg-blue-50 dark:bg-gray-800 rounded-lg shadow px-3 py-4 "
               >
                 <div className="mb-2">
                   {section?.icon?.__icon_url__ && (

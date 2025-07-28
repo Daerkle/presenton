@@ -74,13 +74,13 @@ const BusinessModelSlide: React.FC<Props> = ({ data }) => {
         rel="stylesheet"
       />
       <div
-        className="w-full max-w-[1280px] max-h-[720px] aspect-video bg-white mx-auto rounded shadow-lg overflow-hidden relative z-20"
+        className="w-full max-w-[1280px] max-h-[720px] aspect-video bg-white dark:bg-gray-900 mx-auto rounded shadow-lg overflow-hidden relative z-20"
         style={{
           fontFamily: "Montserrat, sans-serif",
         }}
       >
         {/* Header */}
-        <div className="absolute top-8 left-10 right-10 flex justify-between items-center text-[#1E4CD9] text-sm font-semibold">
+        <div className="absolute top-8 left-10 right-10 flex justify-between items-center text-blue-600 dark:text-blue-400 text-sm font-semibold">
           <span>{data?.companyName}</span>
           <span>{data?.date}</span>
         </div>
@@ -93,7 +93,7 @@ const BusinessModelSlide: React.FC<Props> = ({ data }) => {
               {data?.title}
             </h1>
             {hasChart && (
-              <div className="bg-white rounded-lg shadow p-4 mb-8">
+              <div className="bg-white dark:bg-gray-900 rounded-lg shadow p-4 mb-8">
                 <div className="w-full h-64">
                   <ResponsiveContainer width="100%" height="100%">
                     <BarChart

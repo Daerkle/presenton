@@ -181,13 +181,13 @@ const CompanyTractionSlideLayout: React.FC<Props> = ({ data }) => {
         rel="stylesheet"
       />
       <div
-        className="w-full max-w-[1280px] max-h-[720px] aspect-video bg-white mx-auto rounded shadow-lg overflow-hidden relative z-20"
+        className="w-full max-w-[1280px] max-h-[720px] aspect-video bg-white dark:bg-gray-900 mx-auto rounded shadow-lg overflow-hidden relative z-20"
         style={{
           fontFamily: "Montserrat, sans-serif",
         }}
       >
         {/* Header */}
-        <div className="absolute top-8 left-10 right-10 flex justify-between items-center text-[#1E4CD9] text-sm font-semibold">
+        <div className="absolute top-8 left-10 right-10 flex justify-between items-center text-blue-600 dark:text-blue-400 text-sm font-semibold">
           <span>{data?.companyName}</span>
           <span>{data?.date}</span>
         </div>
@@ -199,7 +199,7 @@ const CompanyTractionSlideLayout: React.FC<Props> = ({ data }) => {
             <h1 className="text-6xl font-bold text-blue-600 mb-4 leading-tight text-left">
               {data?.title}
             </h1>
-            <div className="bg-white rounded-lg shadow p-4 mb-8">
+            <div className="bg-white dark:bg-gray-900 rounded-lg shadow p-4 mb-8">
               <div className="w-full h-64">
                 <ResponsiveContainer width="100%" height="100%">
                   <LineChart data={growthStats}>
@@ -262,15 +262,15 @@ const CompanyTractionSlideLayout: React.FC<Props> = ({ data }) => {
               {stats.map((stat, index) => (
                 <div
                   key={index}
-                  className="flex-1 bg-[#f5f8ff] rounded-lg shadow-sm px-5 py-4 flex flex-col items-start"
+                  className="flex-1 bg-blue-50 dark:bg-gray-800 rounded-lg shadow-sm px-5 py-4 flex flex-col items-start"
                 >
-                  <div className="bg-[#1E4CD9] text-white text-xs font-semibold px-3 py-1 rounded-sm mb-2">
+                  <div className="bg-blue-600 dark:bg-blue-500 text-white dark:text-gray-100 text-xs font-semibold px-3 py-1 rounded-sm mb-2">
                     {stat.label}
                   </div>
-                  <div className="text-2xl font-bold text-[#1E4CD9] mb-1">
+                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-1">
                     {stat.value}
                   </div>
-                  <p className="text-sm text-gray-700 leading-snug">
+                  <p className="text-sm text-gray-700 dark:text-gray-300 leading-snug">
                     {stat.description}
                   </p>
                 </div>

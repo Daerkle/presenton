@@ -106,13 +106,13 @@ const ProductOverviewSlideLayout: React.FC<ProductOverviewSlideLayoutProps> = ({
       />
 
       <div
-        className="w-full rounded-sm max-w-[1280px] shadow-lg max-h-[720px] aspect-video bg-white relative z-20 mx-auto overflow-hidden"
+        className="w-full rounded-sm max-w-[1280px] shadow-lg max-h-[720px] aspect-video bg-white dark:bg-gray-900 relative z-20 mx-auto overflow-hidden"
         style={{
           fontFamily: "Montserrat, sans-serif",
         }}
       >
         {/* Header */}
-        <div className="absolute top-8 left-10 right-10 flex justify-between items-center text-[#1E4CD9] text-sm font-semibold">
+        <div className="absolute top-8 left-10 right-10 flex justify-between items-center text-blue-600 dark:text-blue-400 text-sm font-semibold">
           <span>{slideData?.companyName}</span>
           <span>{slideData?.date}</span>
         </div>
@@ -143,16 +143,16 @@ const ProductOverviewSlideLayout: React.FC<ProductOverviewSlideLayoutProps> = ({
                 >
                   {/* Top Section - Blue background with text */}
                   <div
-                    className={`${products[0].isBlueBackground ? "bg-blue-600" : "bg-gray-100"} p-5 flex flex-col justify-center text-center rounded-t-md`}
+                    className={`${products[0].isBlueBackground ? "bg-blue-600 dark:bg-blue-500" : "bg-gray-100"} p-5 flex flex-col justify-center text-center rounded-t-md`}
                     style={{ height: `${TEXT_SECTION_HEIGHT + 32}px` }}
                   >
                     <h2
-                      className={`text-xl font-semibold mb-3 ${products[0].isBlueBackground ? "text-white" : "text-blue-600"}`}
+                      className={`text-xl font-semibold mb-3 ${products[0].isBlueBackground ? "text-white dark:text-gray-100" : "text-blue-600"}`}
                     >
                       {products[0].title}
                     </h2>
                     <p
-                      className={`text-sm leading-relaxed ${products[0].isBlueBackground ? "text-white" : "text-blue-600"}`}
+                      className={`text-sm leading-relaxed ${products[0].isBlueBackground ? "text-white dark:text-gray-100" : "text-blue-600"}`}
                     >
                       {products[0].description}
                     </p>
@@ -198,16 +198,16 @@ const ProductOverviewSlideLayout: React.FC<ProductOverviewSlideLayoutProps> = ({
                   </div>
                   {/* Bottom Section - Blue background with text */}
                   <div
-                    className={`${products[1].isBlueBackground ? "bg-blue-600" : "bg-gray-100"} p-5 flex flex-col justify-center text-center rounded-b-md`}
+                    className={`${products[1].isBlueBackground ? "bg-blue-600 dark:bg-blue-500" : "bg-gray-100"} p-5 flex flex-col justify-center text-center rounded-b-md`}
                     style={{ height: `${TEXT_SECTION_HEIGHT + 32}px` }}
                   >
                     <h2
-                      className={`text-xl font-semibold mb-3 ${products[1].isBlueBackground ? "text-white" : "text-blue-600"}`}
+                      className={`text-xl font-semibold mb-3 ${products[1].isBlueBackground ? "text-white dark:text-gray-100" : "text-blue-600"}`}
                     >
                       {products[1].title}
                     </h2>
                     <p
-                      className={`text-sm leading-relaxed ${products[1].isBlueBackground ? "text-white" : "text-blue-600"}`}
+                      className={`text-sm leading-relaxed ${products[1].isBlueBackground ? "text-white dark:text-gray-100" : "text-blue-600"}`}
                     >
                       {products[1].description}
                     </p>
