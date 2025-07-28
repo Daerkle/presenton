@@ -16,7 +16,7 @@ WORKDIR /app
 
 # Set environment variables
 ENV APP_DATA_DIRECTORY=/app_data
-ENV TEMP_DIRECTORY=/tmp/presenton
+ENV TEMP_DIRECTORY=/tmp/schwarm
 
 # Install ollama
 RUN curl -fsSL https://ollama.com/install.sh | sh

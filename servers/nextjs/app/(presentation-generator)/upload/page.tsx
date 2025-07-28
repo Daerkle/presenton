@@ -5,36 +5,36 @@ import Header from '@/app/dashboard/components/Header'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-    title: "Presenton | Open Source AI presentation generator",
-    description: "Open-source AI presentation generator with custom layouts, multi-model support (OpenAI, Gemini, Ollama), and PDF/PPTX export. A free Gamma alternative.",
+    title: "SCHWARM | Open Source KI-Präsentationsgenerator",
+    description: "Open-Source KI-Präsentationsgenerator mit anpassbaren Layouts, Multi-Modell-Unterstützung (OpenAI, Gemini, Ollama) und PDF/PPTX-Export. Eine kostenlose Gamma-Alternative.",
     alternates: {
-        canonical: "https://presenton.ai/create"
+        canonical: "https://schwarm.ai/create"
     },
     keywords: [
-        "presentation generator",
-        "AI presentations",
-        "data visualization",
-        "automatic presentation maker",
-        "professional slides",
-        "data-driven presentations",
-        "document to presentation",
-        "presentation automation",
-        "smart presentation tool",
-        "business presentations"
+        "Präsentationsgenerator",
+        "KI Präsentationen",
+        "Datenvisualisierung",
+        "automatischer Präsentationsersteller",
+        "professionelle Folien",
+        "datengesteuerte Präsentationen",
+        "Dokument zu Präsentation",
+        "Präsentationsautomatisierung",
+        "intelligentes Präsentationstool",
+        "Geschäftspräsentationen"
     ],
     openGraph: {
-        title: "Create Data Presentation | PresentOn",
-        description: "Open-source AI presentation generator with custom layouts, multi-model support (OpenAI, Gemini, Ollama), and PDF/PPTX export. A free Gamma alternative.",
+        title: "Datenpräsentation erstellen | SCHWARM",
+        description: "Open-Source KI-Präsentationsgenerator mit anpassbaren Layouts, Multi-Modell-Unterstützung (OpenAI, Gemini, Ollama) und PDF/PPTX-Export. Eine kostenlose Gamma-Alternative.",
         type: "website",
-        url: "https://presenton.ai/create",
-        siteName: "PresentOn"
+        url: "https://schwarm.ai/create",
+        siteName: "SCHWARM"
     },
     twitter: {
         card: "summary_large_image",
-        title: "Create Data Presentation | PresentOn",
-        description: "Open-source AI presentation generator with custom layouts, multi-model support (OpenAI, Gemini, Ollama), and PDF/PPTX export. A free Gamma alternative.",
-        site: "@presenton_ai",
-        creator: "@presenton_ai"
+        title: "Datenpräsentation erstellen | SCHWARM",
+        description: "Open-Source KI-Präsentationsgenerator mit anpassbaren Layouts, Multi-Modell-Unterstützung (OpenAI, Gemini, Ollama) und PDF/PPTX-Export. Eine kostenlose Gamma-Alternative.",
+        site: "@schwarm_ai",
+        creator: "@schwarm_ai"
     }
 }
 
@@ -43,7 +43,7 @@ const page = () => {
         <div className='relative'>
             <Header />
             <div className='flex flex-col items-center justify-center  py-8'>
-                <h1 className='text-3xl font-semibold font-instrument_sans'>Create Presentation </h1>
+                <h1 className='text-3xl font-semibold font-instrument_sans'>Präsentation erstellen</h1>
                 {/* <p className='text-sm text-gray-500'>We will generate a presentation for you</p> */}
             </div>
 

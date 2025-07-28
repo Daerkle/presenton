@@ -32,46 +32,46 @@ const roboto = Roboto({
 
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://presenton.ai"),
-  title: "Presenton - Open Source AI presentation generator",
+  metadataBase: new URL("https://schwarm.ai"),
+  title: "SCHWARM - KI-Präsentationsgenerator",
   description:
-    "Open-source AI presentation generator with custom layouts, multi-model support (OpenAI, Gemini, Ollama), and PDF/PPTX export. A free Gamma alternative.",
+    "Open-Source KI-Präsentationsgenerator mit anpassbaren Layouts, Multi-Modell-Unterstützung (OpenAI, Gemini, Ollama) und PDF/PPTX-Export. Eine kostenlose Gamma-Alternative.",
   keywords: [
-    "AI presentation generator",
-    "data storytelling",
-    "data visualization tool",
-    "AI data presentation",
-    "presentation generator",
-    "data to presentation",
-    "interactive presentations",
-    "professional slides",
+    "KI Präsentationsgenerator",
+    "Daten-Storytelling",
+    "Datenvisualisierung Tool",
+    "KI Datenpräsentation",
+    "Präsentationsgenerator",
+    "Daten zu Präsentation",
+    "interaktive Präsentationen",
+    "professionelle Folien",
   ],
   openGraph: {
-    title: "Presenton - Open Source AI presentation generator",
+    title: "SCHWARM - KI-Präsentationsgenerator",
     description:
-      "Open-source AI presentation generator with custom layouts, multi-model support (OpenAI, Gemini, Ollama), and PDF/PPTX export. A free Gamma alternative.",
-    url: "https://presenton.ai",
-    siteName: "Presenton",
+      "Open-Source KI-Präsentationsgenerator mit anpassbaren Layouts, Multi-Modell-Unterstützung (OpenAI, Gemini, Ollama) und PDF/PPTX-Export. Eine kostenlose Gamma-Alternative.",
+    url: "https://schwarm.ai",
+    siteName: "SCHWARM",
     images: [
       {
-        url: "https://presenton.ai/presenton-feature-graphics.png",
+        url: "https://schwarm.ai/schwarm-feature-graphics.png",
         width: 1200,
         height: 630,
-        alt: "Presenton Logo",
+        alt: "SCHWARM Logo",
       },
     ],
     type: "website",
-    locale: "en_US",
+    locale: "de_DE",
   },
   alternates: {
-    canonical: "https://presenton.ai",
+    canonical: "https://schwarm.ai",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Presenton - Open Source AI presentation generator",
+    title: "SCHWARM - KI-Präsentationsgenerator",
     description:
-      "Open-source AI presentation generator with custom layouts, multi-model support (OpenAI, Gemini, Ollama), and PDF/PPTX export. A free Gamma alternative.",
-    images: ["https://presenton.ai/presenton-feature-graphics.png"],
+      "Open-Source KI-Präsentationsgenerator mit anpassbaren Layouts, Multi-Modell-Unterstützung (OpenAI, Gemini, Ollama) und PDF/PPTX-Export. Eine kostenlose Gamma-Alternative.",
+    images: ["https://schwarm.ai/schwarm-feature-graphics.png"],
   },
 };
 
