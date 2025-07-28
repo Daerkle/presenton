@@ -82,9 +82,9 @@ export default function RootLayout({
 }>) {
 
   return (
-    <html lang="en">
+    <html lang="de" suppressHydrationWarning>
       <body
-        className={`${inter.variable} ${roboto.variable} ${instrument_sans.variable} antialiased`}
+        className={`${inter.variable} ${roboto.variable} ${instrument_sans.variable} antialiased bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-50`}
       >
         <Providers>
           <LayoutProvider>
