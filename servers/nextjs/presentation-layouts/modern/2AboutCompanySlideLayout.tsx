@@ -21,7 +21,7 @@ const aboutCompanySlideSchema = z.object({
     .meta({
       description: "Main content text describing the company or topic",
     }),
-  companyName: z.string().min(2).max(50).default("presenton").meta({
+  companyName: z.string().min(2).max(50).default("SCHWARM").meta({
     description: "Company name displayed in header",
   }),
   date: z.string().min(5).max(30).default("June 13, 2038").meta({
@@ -53,13 +53,13 @@ const AboutCompanySlideLayout: React.FC<AboutCompanySlideLayoutProps> = ({
       />
 
       <div
-        className="w-full rounded-sm max-w-[1280px] shadow-lg  aspect-video bg-white relative z-20 mx-auto overflow-hidden"
+        className="w-full rounded-sm max-w-[1280px] shadow-lg  aspect-video bg-white dark:bg-gray-900 relative z-20 mx-auto overflow-hidden"
         style={{
           fontFamily: "Montserrat, sans-serif",
         }}
       >
         {/* Header */}
-        <div className="absolute top-8 left-10 right-10 flex justify-between items-center text-[#1E4CD9] text-sm font-semibold">
+        <div className="absolute top-8 left-10 right-10 flex justify-between items-center text-blue-600 dark:text-blue-400 text-sm font-semibold">
           <span>{slideData?.companyName}</span>
           <span>{slideData?.date}</span>
         </div>
@@ -114,7 +114,7 @@ const AboutCompanySlideLayout: React.FC<AboutCompanySlideLayoutProps> = ({
                   </div>
 
                   {/* Building edge highlight */}
-                  <div className="absolute right-0 top-0 w-1 h-full bg-white opacity-80"></div>
+                  <div className="absolute right-0 top-0 w-1 h-full bg-white dark:bg-gray-100 opacity-80"></div>
                 </div>
               )}
             </div>

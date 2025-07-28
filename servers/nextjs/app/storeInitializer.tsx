@@ -109,7 +109,7 @@ export function StoreInitializer({ children }: { children: React.ReactNode }) {
             <div className="mb-6">
               <img
                 src="/Logo.png"
-                alt="PresentOn"
+                alt="SCHWARM"
                 className="h-12 mx-auto mb-4 opacity-90"
               />
               <div className="w-16 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>

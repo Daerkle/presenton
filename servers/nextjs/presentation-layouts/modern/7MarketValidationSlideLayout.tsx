@@ -13,7 +13,7 @@ export const layoutDescription =
 
 // Make the schema generic: allow any label/value pairs for comparison
 const marketValidationSchema = z.object({
-  companyName: z.string().min(2).max(50).default("presenton").meta({
+  companyName: z.string().min(2).max(50).default("SCHWARM").meta({
     description: "Company name displayed in header",
   }),
   date: z.string().min(5).max(50).default("June 13, 2038").meta({
@@ -94,13 +94,13 @@ const MarketValidationSlideLayout: React.FC<
       />
 
       <div
-        className="w-full max-w-[1280px] max-h-[720px] aspect-video bg-white mx-auto rounded shadow-lg overflow-hidden relative z-20"
+        className="w-full max-w-[1280px] max-h-[720px] aspect-video bg-white dark:bg-gray-900 mx-auto rounded shadow-lg overflow-hidden relative z-20"
         style={{
           fontFamily: "Montserrat, sans-serif",
         }}
       >
         {/* Header */}
-        <div className="absolute top-8 left-10 right-10 flex justify-between items-center text-[#1E4CD9] text-sm font-semibold">
+        <div className="absolute top-8 left-10 right-10 flex justify-between items-center text-blue-600 dark:text-blue-400 text-sm font-semibold">
           <span>{slideData?.companyName}</span>
           <span>{slideData?.date}</span>
         </div>

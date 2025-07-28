@@ -3,22 +3,22 @@ import Header from '@/app/dashboard/components/Header'
 import { Metadata } from 'next'
 import OutlinePage from './components/OutlinePage'
 export const metadata: Metadata = {
-  title: "Outline Presentation",
-  description: "Customize and organize your presentation outline. Drag and drop slides, add charts, and generate your presentation with ease.",
+  title: "Präsentationsgliederung",
+  description: "Passen Sie Ihre Präsentationsgliederung an und organisieren Sie sie. Verschieben Sie Folien per Drag & Drop, fügen Sie Diagramme hinzu und generieren Sie Ihre Präsentation mit Leichtigkeit.",
   alternates: {
-    canonical: "https://presenton.ai/create"
+    canonical: "https://schwarm.ai/create"
   },
   keywords: [
-    "presentation generator",
-    "AI presentations",
-    "data visualization",
-    "automatic presentation maker",
-    "professional slides",
-    "data-driven presentations",
-    "document to presentation",
-    "presentation automation",
-    "smart presentation tool",
-    "business presentations"
+    "Präsentationsgenerator",
+    "KI Präsentationen",
+    "Datenvisualisierung",
+    "automatischer Präsentationsersteller",
+    "professionelle Folien",
+    "datengesteuerte Präsentationen",
+    "Dokument zu Präsentation",
+    "Präsentationsautomatisierung",
+    "intelligentes Präsentationstool",
+    "Geschäftspräsentationen"
   ]
 }
 const page = () => {

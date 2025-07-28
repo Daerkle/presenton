@@ -24,7 +24,7 @@ const introPitchDeckSchema = z.object({
   contactWebsite: z.string().default("www.reallygreatsite.com").meta({
     description: "Contact website URL displayed in footer",
   }),
-  companyName: z.string().default("presenton").meta({
+  companyName: z.string().default("SCHWARM").meta({
     description: "Company name displayed in header",
   }),
   date: z.string().default("June 13, 2038").meta({
@@ -59,7 +59,7 @@ const IntroPitchDeckSlide: React.FC<IntroSlideLayoutProps> = ({
         rel="stylesheet"
       />
       <div
-        className="w-full max-w-[1280px] bg-white aspect-video mx-auto relative overflow-hidden rounded-md"
+        className="w-full max-w-[1280px] bg-white dark:bg-gray-900 aspect-video mx-auto relative overflow-hidden rounded-md"
         style={{
           fontFamily: "Montserrat, sans-serif",
           backgroundSize: "cover",
@@ -67,7 +67,7 @@ const IntroPitchDeckSlide: React.FC<IntroSlideLayoutProps> = ({
         }}
       >
         {/* Top Header */}
-        <div className="absolute top-8 left-10 right-10 flex justify-between items-center text-[#1E4CD9] text-sm font-semibold">
+        <div className="absolute top-8 left-10 right-10 flex justify-between items-center text-blue-600 dark:text-blue-400 text-sm font-semibold">
           <p>{slideData?.companyName}</p>
           <p>{slideData?.date}</p>
         </div>
@@ -83,14 +83,14 @@ const IntroPitchDeckSlide: React.FC<IntroSlideLayoutProps> = ({
           {title && (
             <div className="relative inline-block">
               <h1
-                className="text-7xl font-bold text-[#1E4CD9] leading-none"
+                className="text-7xl font-bold text-blue-600 dark:text-blue-400 leading-none"
                 id="pitchdeck-title"
               >
                 {title}
               </h1>
               {/* Blue underline */}
               <span
-                className="block bg-[#1E4CD9] h-[4px] absolute left-0"
+                className="block bg-blue-600 dark:bg-blue-500 h-[4px] absolute left-0"
                 style={{
                   width: "50%",
                   bottom: "-0.5em",
@@ -102,7 +102,7 @@ const IntroPitchDeckSlide: React.FC<IntroSlideLayoutProps> = ({
         </div>
 
         {/* Bottom Contact Row */}
-        <div className="absolute bottom-8 left-10 right-10 flex flex-wrap items-center gap-10 text-[#1E4CD9] text-sm font-medium">
+        <div className="absolute bottom-8 left-10 right-10 flex flex-wrap items-center gap-10 text-blue-600 dark:text-blue-400 text-sm font-medium">
           {contactNumber && (
             <div className="flex items-center gap-2">
               <span className="text-lg">📞</span>

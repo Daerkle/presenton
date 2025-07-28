@@ -83,7 +83,7 @@ const problemStatementSlideSchema = z.object({
       description:
         "List of problem categories with titles, descriptions, and optional icons",
     }),
-  companyName: z.string().min(2).max(50).default("presenton").meta({
+  companyName: z.string().min(2).max(50).default("SCHWARM").meta({
     description: "Company name displayed in header",
   }),
   date: z.string().min(5).max(30).default("June 13, 2038").meta({
@@ -115,13 +115,13 @@ const ProblemStatementSlideLayout: React.FC<
       />
 
       <div
-        className="w-full rounded-sm max-w-[1280px] shadow-lg max-h-[720px] aspect-video bg-blue-600 relative z-20 mx-auto overflow-hidden text-white"
+        className="w-full rounded-sm max-w-[1280px] shadow-lg max-h-[720px] aspect-video bg-blue-600 dark:bg-blue-500 relative z-20 mx-auto overflow-hidden text-white dark:text-gray-100"
         style={{
           fontFamily: "Montserrat, sans-serif",
         }}
       >
         {/* Header */}
-        <div className="absolute top-8 left-10 right-10 flex justify-between items-center text-white text-sm font-semibold">
+        <div className="absolute top-8 left-10 right-10 flex justify-between items-center text-white dark:text-gray-100 text-sm font-semibold">
           <span>{slideData?.companyName}</span>
           <span>{slideData?.date}</span>
         </div>
@@ -131,11 +131,11 @@ const ProblemStatementSlideLayout: React.FC<
           {/* Left side - Main Problem */}
           <div className="flex-1 pr-16 flex flex-col justify-center">
             <div className="flex flex-col items-start justify-center h-full">
-              <h2 className="text-5xl font-bold text-white mb-8 leading-tight text-left">
+              <h2 className="text-5xl font-bold text-white dark:text-gray-100 mb-8 leading-tight text-left">
                 {slideData?.title}
               </h2>
 
-              <div className="text-lg text-white leading-relaxed font-normal mb-12 max-w-lg text-left">
+              <div className="text-lg text-white dark:text-gray-100 leading-relaxed font-normal mb-12 max-w-lg text-left">
                 {slideData?.description}
               </div>
             </div>
@@ -147,7 +147,7 @@ const ProblemStatementSlideLayout: React.FC<
               {problemCategories.map((category, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-5 bg-white bg-opacity-5 rounded-lg p-5"
+                  className="flex items-start gap-5 bg-white dark:bg-gray-100 bg-opacity-5 rounded-lg p-5"
                 >
                   <div className="flex-shrink-0">
                     {category.icon?.__icon_url__ && (
@@ -160,7 +160,7 @@ const ProblemStatementSlideLayout: React.FC<
                     )}
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white mb-1">
+                    <h3 className="text-xl font-semibold text-white dark:text-gray-100 mb-1">
                       {category.title}
                     </h3>
                     <p className="text-sm text-blue-100 leading-relaxed max-w-md">
@@ -174,7 +174,7 @@ const ProblemStatementSlideLayout: React.FC<
         </div>
 
         {/* Bottom border line */}
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-white"></div>
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-white dark:bg-gray-100"></div>
       </div>
     </>
   );

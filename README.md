@@ -1,82 +1,82 @@
 <p align="center">
-  <img src="readme_assets/images/presenton-logo.png" height="90" alt="Presenton Logo" />
+  <img src="readme_assets/images/presenton-logo.png" height="90" alt="SCHWARM Logo" />
 </p>
 
 <p align="center">
   <a href="https://discord.gg/9ZsKKxudNE">
-    <img src="https://img.shields.io/badge/Discord-Join%20Community-5865F2?logo=discord&style=for-the-badge" alt="Join our Discord" />
+    <img src="https://img.shields.io/badge/Discord-Community%20beitreten-5865F2?logo=discord&style=for-the-badge" alt="Tritt unserem Discord bei" />
   </a>
   &nbsp;
-  <a href="https://x.com/presentonai">
-    <img src="https://img.shields.io/badge/X-Follow%20Us-000000?logo=twitter&style=for-the-badge" alt="Follow us on X" />
+  <a href="https://x.com/schwarm_ai">
+    <img src="https://img.shields.io/badge/X-Folge%20uns-000000?logo=twitter&style=for-the-badge" alt="Folge uns auf X" />
   </a>
 </p>
 
-# Open-Source AI Presentation Generator and API (Gamma, Beautiful AI, Decktopus Alternative)
+# Open-Source KI-Präsentationsgenerator und API (Gamma, Beautiful AI, Decktopus Alternative)
 
 
-**Presenton** is an open-source application for generating presentations with AI — all running locally on your device. Stay in control of your data and privacy while using models like OpenAI and Gemini, or use your own hosted models through Ollama.
+**SCHWARM** ist eine Open-Source-Anwendung zur Generierung von Präsentationen mit KI — alles läuft lokal auf Ihrem Gerät. Behalten Sie die Kontrolle über Ihre Daten und Privatsphäre, während Sie Modelle wie OpenAI und Gemini verwenden oder Ihre eigenen gehosteten Modelle über Ollama nutzen.
 
 ![Demo](readme_assets/demo.gif)
 
 
 > [!NOTE]
-> **Enterprise Inquiries:**
-> For enterprise use, custom deployments, or partnership opportunities, contact us at **[suraj@presenton.ai](mailto:suraj@presenton.ai)**.
+> **Unternehmensanfragen:**
+> Für Unternehmensnutzung, individuelle Bereitstellungen oder Partnerschaftsmöglichkeiten kontaktieren Sie uns unter **[kontakt@schwarm.ai](mailto:kontakt@schwarm.ai)**.
 
 > [!IMPORTANT]
-> Like Presenton? A ⭐ star shows your support and encourages us to keep building!
+> Gefällt Ihnen SCHWARM? Ein ⭐ Stern zeigt Ihre Unterstützung und ermutigt uns weiterzumachen!
 
 > [!TIP]
-> For detailed setup guides, API documentation, and advanced configuration options, visit our **[Official Documentation](https://docs.presenton.ai)**
+> Für detaillierte Einrichtungsanleitungen, API-Dokumentation und erweiterte Konfigurationsoptionen besuchen Sie unsere **[Offizielle Dokumentation](https://docs.schwarm.ai)**
 
 
-## ✨ More Freedom with AI Presentations
+## ✨ Mehr Freiheit mit KI-Präsentationen
 
-* ✅ **Custom layouts/templates/themes** — Create custom layouts with HTML and Tailwind, support any presentation design
-* ✅ **Bring Your Own Key** — Only pay for what you use. OpenAI, Gemini (More coming soon...)
-* ✅ **API Presentation Generation** — Host as API to generate presentations over requests
-* ✅ **Ollama Support** — Run open-source models locally with Ollama integration
-* ✅ **OpenAI API Compatibility** — Use any OpenAI-compatible API endpoint with your own models
-* ✅ **Versatile Image Generation** — Choose from DALL-E 3, Gemini Flash, Pexels, or Pixabay for your visuals
-* ✅ **Runs Locally** — All code runs on your device
-* ✅ **Privacy-First** — No tracking, no data stored by us
-* ✅ **Flexible** — Generate presentations from prompts or outlines
-* ✅ **Export Ready** — Save as PowerPoint (PPTX) and PDF
-* ✅ **Fully Open-Source** — Apache 2.0 licensed
+* ✅ **Individuelle Layouts/Vorlagen/Themen** — Erstellen Sie individuelle Layouts mit HTML und Tailwind, unterstützen Sie jedes Präsentationsdesign
+* ✅ **Bring Your Own Key** — Zahlen Sie nur für das, was Sie nutzen. OpenAI, Gemini (Weitere folgen...)
+* ✅ **API-Präsentationsgenerierung** — Hosten Sie als API zur Generierung von Präsentationen über Anfragen
+* ✅ **Ollama-Unterstützung** — Führen Sie Open-Source-Modelle lokal mit Ollama-Integration aus
+* ✅ **OpenAI API-Kompatibilität** — Verwenden Sie jeden OpenAI-kompatiblen API-Endpunkt mit Ihren eigenen Modellen
+* ✅ **Vielseitige Bildgenerierung** — Wählen Sie zwischen DALL-E 3, Gemini Flash, Pexels oder Pixabay für Ihre Visualisierungen
+* ✅ **Läuft lokal** — Der gesamte Code läuft auf Ihrem Gerät
+* ✅ **Datenschutz-First** — Kein Tracking, keine Datenspeicherung durch uns
+* ✅ **Flexibel** — Generieren Sie Präsentationen aus Prompts oder Gliederungen
+* ✅ **Export-bereit** — Speichern als PowerPoint (PPTX) und PDF
+* ✅ **Vollständig Open-Source** — Apache 2.0 lizenziert
 
-## Deploy on Cloud (one click deployment)
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/presenton-ai-presentations?referralCode=ubp0kk)
+## In der Cloud bereitstellen (Ein-Klick-Bereitstellung)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/schwarm-ai-presentations?referralCode=ubp0kk)
 
-## Running Presenton Docker
+## SCHWARM Docker ausführen
 
-#### 1. Start Presenton
+#### 1. SCHWARM starten
 
 ##### Linux/MacOS (Bash/Zsh Shell):
 ```bash
-docker run -it --name presenton -p 5000:80 -v "./app_data:/app_data" ghcr.io/presenton/presenton:latest
+docker run -it --name schwarm -p 5000:80 -v "./app_data:/app_data" ghcr.io/schwarm/schwarm:latest
 ```
 
 ##### Windows (PowerShell):
 ```bash
-docker run -it --name presenton -p 5000:80 -v "${PWD}\app_data:/app_data" ghcr.io/presenton/presenton:latest
+docker run -it --name schwarm -p 5000:80 -v "${PWD}\app_data:/app_data" ghcr.io/schwarm/schwarm:latest
 ```
 
-#### 2. Open Presenton
-Open http://localhost:5000 on browser of your choice to use Presenton.
+#### 2. SCHWARM öffnen
+Öffnen Sie http://localhost:5000 in Ihrem bevorzugten Browser, um SCHWARM zu verwenden.
 
-> **Note: You can replace 5000 with any other port number of your choice to run Presenton on a different port number.**
+> **Hinweis: Sie können 5000 durch eine beliebige andere Portnummer ersetzen, um SCHWARM auf einem anderen Port auszuführen.**
 
-## Deployment Configurations
+## Bereitstellungskonfigurationen
 
-You may want to directly provide your API KEYS as environment variables and keep them hidden. You can set these environment variables to achieve it.
+Möglicherweise möchten Sie Ihre API-Schlüssel direkt als Umgebungsvariablen bereitstellen und sie verborgen halten. Sie können diese Umgebungsvariablen setzen, um dies zu erreichen.
 
-- **CAN_CHANGE_KEYS=[true/false]**: Set this to **false** if you want to keep API Keys hidden and make them unmodifiable.
-- **LLM=[openai/google/ollama/custom]**: Select **LLM** of your choice.
-- **OPENAI_API_KEY=[Your OpenAI API Key]**: Provide this if **LLM** is set to **openai**
-- **GOOGLE_API_KEY=[Your Google API Key]**: Provide this if **LLM** is set to **google**
-- **OLLAMA_URL=[Custom Ollama URL]**: Provide this if you want to custom Ollama URL and **LLM** is set to **ollama**
-- **OLLAMA_MODEL=[Ollama Model ID]**: Provide this if **LLM** is set to **ollama**
+- **CAN_CHANGE_KEYS=[true/false]**: Setzen Sie dies auf **false**, wenn Sie API-Schlüssel verborgen halten und unveränderbar machen möchten.
+- **LLM=[openai/google/ollama/custom]**: Wählen Sie das **LLM** Ihrer Wahl.
+- **OPENAI_API_KEY=[Ihr OpenAI API-Schlüssel]**: Geben Sie dies an, wenn **LLM** auf **openai** gesetzt ist
+- **GOOGLE_API_KEY=[Ihr Google API-Schlüssel]**: Geben Sie dies an, wenn **LLM** auf **google** gesetzt ist
+- **OLLAMA_URL=[Benutzerdefinierte Ollama URL]**: Geben Sie dies an, wenn Sie eine benutzerdefinierte Ollama URL verwenden möchten und **LLM** auf **ollama** gesetzt ist
+- **OLLAMA_MODEL=[Ollama Modell-ID]**: Geben Sie dies an, wenn **LLM** auf **ollama** gesetzt ist
 - **CUSTOM_LLM_URL=[Custom OpenAI Compatible URL]**: Provide this if **LLM** is set to **custom**
 - **CUSTOM_LLM_API_KEY=[Custom OpenAI Compatible API KEY]**: Provide this if **LLM** is set to **custom**
 - **CUSTOM_MODEL=[Custom Model ID]**: Provide this if **LLM** is set to **custom**
@@ -94,27 +94,27 @@ You can also set the following environment variables to customize the image gene
 
 ### Using OpenAI
 ```bash
-docker run -it --name presenton -p 5000:80 -e LLM="openai" -e OPENAI_API_KEY="******" -e IMAGE_PROVIDER="dall-e-3" -e CAN_CHANGE_KEYS="false" -v "./app_data:/app_data" ghcr.io/presenton/presenton:latest
+docker run -it --name schwarm -p 5000:80 -e LLM="openai" -e OPENAI_API_KEY="******" -e IMAGE_PROVIDER="dall-e-3" -e CAN_CHANGE_KEYS="false" -v "./app_data:/app_data" ghcr.io/schwarm/schwarm:latest
 ```
 
 ### Using Ollama
 ```bash
-docker run -it --name presenton -p 5000:80 -e LLM="ollama" -e OLLAMA_MODEL="llama3.2:3b" -e IMAGE_PROVIDER="pexels" -e PEXELS_API_KEY="*******" -e CAN_CHANGE_KEYS="false" -v "./app_data:/app_data" ghcr.io/presenton/presenton:latest
+docker run -it --name schwarm -p 5000:80 -e LLM="ollama" -e OLLAMA_MODEL="llama3.2:3b" -e IMAGE_PROVIDER="pexels" -e PEXELS_API_KEY="*******" -e CAN_CHANGE_KEYS="false" -v "./app_data:/app_data" ghcr.io/schwarm/schwarm:latest
 ```
 
 ### Using OpenAI Compatible API
 ```bash
-docker run -it -p 5000:80 -e CAN_CHANGE_KEYS="false"  -e LLM="custom" -e CUSTOM_LLM_URL="http://*****" -e CUSTOM_LLM_API_KEY="*****" -e CUSTOM_MODEL="llama3.2:3b" -e IMAGE_PROVIDER="pexels" -e  PEXELS_API_KEY="********" -v "./app_data:/app_data" ghcr.io/presenton/presenton:latest
+docker run -it -p 5000:80 -e CAN_CHANGE_KEYS="false"  -e LLM="custom" -e CUSTOM_LLM_URL="http://*****" -e CUSTOM_LLM_API_KEY="*****" -e CUSTOM_MODEL="llama3.2:3b" -e IMAGE_PROVIDER="pexels" -e  PEXELS_API_KEY="********" -v "./app_data:/app_data" ghcr.io/schwarm/schwarm:latest
 ```
 
-#### Running Presenton with GPU Support
+#### Running SCHWARM with GPU Support
 
 To use GPU acceleration with Ollama models, you need to install and configure the NVIDIA Container Toolkit. This allows Docker containers to access your NVIDIA GPU.
 
-Once the NVIDIA Container Toolkit is installed and configured, you can run Presenton with GPU support by adding the `--gpus=all` flag:
+Once the NVIDIA Container Toolkit is installed and configured, you can run SCHWARM with GPU support by adding the `--gpus=all` flag:
 
 ```bash
-docker run -it --name presenton --gpus=all -p 5000:80 -e LLM="ollama" -e OLLAMA_MODEL="llama3.2:3b" -e IMAGE_PROVIDER="pexels" -e PEXELS_API_KEY="*******" -e CAN_CHANGE_KEYS="false" -v "./app_data:/app_data" ghcr.io/presenton/presenton:latest
+docker run -it --name schwarm --gpus=all -p 5000:80 -e LLM="ollama" -e OLLAMA_MODEL="llama3.2:3b" -e IMAGE_PROVIDER="pexels" -e PEXELS_API_KEY="*******" -e CAN_CHANGE_KEYS="false" -v "./app_data:/app_data" ghcr.io/schwarm/schwarm:latest
 ```
 
 > **Note:** GPU acceleration significantly improves the performance of Ollama models, especially for larger models. Make sure you have sufficient GPU memory for your chosen model.
@@ -176,12 +176,12 @@ curl -X POST http://localhost:5000/api/v1/ppt/generate/presentation \
 
 > **Note:** Make sure to prepend your server's root URL to the path and edit_path fields in the response to construct valid links.
 
-For detailed info checkout [API documentation](https://docs.presenton.ai/using-presenton-api).
+For detailed info checkout [API documentation](https://docs.schwarm.ai/using-schwarm-api).
 
 ### API Tutorials
-- [Generate Presentations via API in 5 minutes](https://docs.presenton.ai/tutorial/generate-presentation-over-api)
-- [Create Presentations from CSV using AI](https://docs.presenton.ai/tutorial/generate-presentation-from-csv)
-- [Create Data Reports Using AI](https://docs.presenton.ai/tutorial/create-data-reports-using-ai)
+- [Generate Presentations via API in 5 minutes](https://docs.schwarm.ai/tutorial/generate-presentation-over-api)
+- [Create Presentations from CSV using AI](https://docs.schwarm.ai/tutorial/generate-presentation-from-csv)
+- [Create Data Reports Using AI](https://docs.schwarm.ai/tutorial/create-data-reports-using-ai)
 
 ## Roadmap
 - [x] Support for custom HTML templates by developers

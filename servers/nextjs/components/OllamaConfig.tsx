@@ -50,15 +50,15 @@ export default function OllamaConfig({
   return (
     <>
       <div className="mb-8">
-        <label className="block text-sm font-medium text-gray-700 mb-3">
+        <label className="block text-sm font-medium mb-3">
           Choose a supported model
         </label>
         <div className="w-full">
           {ollamaModelsLoading ? (
-            <div className="w-full h-12 px-4 py-4 border border-gray-300 rounded-lg bg-gray-50 flex items-center justify-center">
+            <div className="w-full h-12 px-4 py-4 border rounded-lg bg-muted flex items-center justify-center">
               <div className="flex items-center gap-2">
-                <Loader2 className="w-4 h-4 animate-spin text-gray-500" />
-                <span className="text-sm text-gray-600">Loading models...</span>
+                <Loader2 className="w-4 h-4 animate-spin text-muted-foreground" />
+                <span className="text-sm text-muted-foreground">Modelle werden geladen...</span>
               </div>
             </div>
           ) : ollamaModels && ollamaModels.length > 0 ? (
@@ -71,7 +71,7 @@ export default function OllamaConfig({
                   variant="outline"
                   role="combobox"
                   aria-expanded={openModelSelect}
-                  className="w-full h-12 px-4 py-4 outline-none border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-colors hover:border-gray-400 justify-between"
+                  className="w-full h-12 justify-between font-normal"
                 >
                   <div className="flex gap-3 items-center">
                     {ollamaModel && (
@@ -87,7 +87,7 @@ export default function OllamaConfig({
                         />
                       </div>
                     )}
-                    <span className="text-sm font-medium text-gray-900">
+                    <span className="text-sm font-medium">
                       {ollamaModel
                         ? ollamaModels?.find(
                           (m) => m.value === ollamaModel
@@ -95,7 +95,7 @@ export default function OllamaConfig({
                         : "Select a model"}
                     </span>
                     {ollamaModel && (
-                      <span className="text-xs text-gray-500 bg-gray-100 rounded-full px-2 py-1">
+                      <span className="text-xs text-muted-foreground bg-muted rounded-full px-2 py-1">
                         {
                           ollamaModels?.find(
                             (m) => m.value === ollamaModel

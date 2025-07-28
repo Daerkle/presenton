@@ -83,7 +83,7 @@ const modernTeamSlideSchema = z.object({
     .meta({
       description: "List of team members with their information",
     }),
-  companyName: z.string().min(2).max(50).default("presenton").meta({
+  companyName: z.string().min(2).max(50).default("SCHWARM").meta({
     description: "Company name displayed in header",
   }),
   date: z.string().min(5).max(50).default("June 13, 2038").meta({
@@ -111,13 +111,13 @@ const ModernTeamSlideLayout: React.FC<ModernTeamSlideLayoutProps> = ({
       />
 
       <div
-        className="w-full max-w-[1280px] max-h-[720px] aspect-video bg-white mx-auto rounded shadow-lg overflow-hidden relative z-20"
+        className="w-full max-w-[1280px] max-h-[720px] aspect-video bg-white dark:bg-gray-900 mx-auto rounded shadow-lg overflow-hidden relative z-20"
         style={{
           fontFamily: "Montserrat, sans-serif",
         }}
       >
         {/* Header */}
-        <div className="absolute top-8 left-10 right-10 flex justify-between items-center text-[#1E4CD9] text-sm font-semibold">
+        <div className="absolute top-8 left-10 right-10 flex justify-between items-center text-blue-600 dark:text-blue-400 text-sm font-semibold">
           <span>{slideData?.companyName}</span>
           <span>{slideData?.date}</span>
         </div>
@@ -140,11 +140,11 @@ const ModernTeamSlideLayout: React.FC<ModernTeamSlideLayoutProps> = ({
             {slideData?.teamMembers?.map((member, idx) => (
               <div
                 key={idx}
-                className="flex flex-col items-center bg-[#f7f9fc] rounded-lg shadow-md px-6 pt-6 pb-4 w-1/4 min-w-[210px] max-w-[240px] mx-auto"
+                className="flex flex-col items-center bg-gray-50 dark:bg-gray-800 rounded-lg shadow-md px-6 pt-6 pb-4 w-1/4 min-w-[210px] max-w-[240px] mx-auto"
                 style={{ minHeight: 340 }}
               >
                 {/* Photo */}
-                <div className="relative w-28 h-28 mb-4 rounded overflow-hidden bg-white border-2 border-blue-100 flex items-center justify-center">
+                <div className="relative w-28 h-28 mb-4 rounded overflow-hidden bg-white dark:bg-gray-900 border-2 border-blue-100 flex items-center justify-center">
                   {member.image.__image_url__ && (
                     <img
                       src={member.image.__image_url__}
@@ -158,11 +158,11 @@ const ModernTeamSlideLayout: React.FC<ModernTeamSlideLayoutProps> = ({
                   {member.name}
                 </div>
                 {/* Position Badge */}
-                <div className="bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-sm mb-2 uppercase tracking-wide">
+                <div className="bg-blue-600 dark:bg-blue-500 text-white dark:text-gray-100 text-xs font-semibold px-3 py-1 rounded-sm mb-2 uppercase tracking-wide">
                   {member.position}
                 </div>
                 {/* Description */}
-                <div className="text-sm text-gray-700 text-center mb-2 min-h-[48px]">
+                <div className="text-sm text-gray-700 dark:text-gray-300 text-center mb-2 min-h-[48px]">
                   {member.description}
                 </div>
                 {/* LinkedIn Link (if provided) */}

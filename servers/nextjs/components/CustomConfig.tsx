@@ -11,6 +11,9 @@ import {
 } from "./ui/command";
 import { Popover, PopoverContent, PopoverTrigger } from "./ui/popover";
 import { cn } from "@/lib/utils";
+import { Input } from "./ui/input";
+import { Label } from "./ui/label";
+import { Alert, AlertDescription } from "./ui/alert";
 
 interface CustomConfigProps {
   customLlmUrl: string;
@@ -39,54 +42,49 @@ export default function CustomConfig({
 }: CustomConfigProps) {
   return (
     <>
-      <div className="mb-4">
-        <label className="block text-sm font-medium text-gray-700 mb-2">
-          OpenAI Compatible URL
-        </label>
-        <div className="relative">
-          <input
-            type="text"
-            required
-            placeholder="Enter your URL"
-            className="w-full px-4 py-2.5 outline-none border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-colors"
-            value={customLlmUrl}
-            onChange={(e) =>
-              onInputChange(e.target.value, "custom_llm_url")
-            }
-          />
-        </div>
+      <div className="mb-4 space-y-2">
+        <Label htmlFor="custom-llm-url">
+          OpenAI kompatible URL
+        </Label>
+        <Input
+          id="custom-llm-url"
+          type="text"
+          required
+          placeholder="https://api.example.com/v1"
+          value={customLlmUrl}
+          onChange={(e) =>
+            onInputChange(e.target.value, "custom_llm_url")
+          }
+        />
       </div>
-      <div className="mb-4">
-        <label className="block text-sm font-medium text-gray-700 mb-2">
-          OpenAI Compatible API Key
-        </label>
-        <div className="relative">
-          <input
-            type="text"
-            required
-            placeholder="Enter your API Key"
-            className="w-full px-4 py-2.5 outline-none border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-colors"
-            value={customLlmApiKey}
-            onChange={(e) =>
-              onInputChange(e.target.value, "custom_llm_api_key")
-            }
-          />
-        </div>
+      <div className="mb-4 space-y-2">
+        <Label htmlFor="custom-api-key">
+          OpenAI kompatibler API-Schlüssel
+        </Label>
+        <Input
+          id="custom-api-key"
+          type="text"
+          required
+          placeholder="sk-..."
+          className="font-mono"
+          value={customLlmApiKey}
+          onChange={(e) =>
+            onInputChange(e.target.value, "custom_llm_api_key")
+          }
+        />
       </div>
 
       {/* Model selection dropdown - only show if models are available */}
       {customModelsChecked && customModels.length > 0 && (
         <div className="mb-4">
-          <div className="mb-3 p-3 bg-amber-50 border border-amber-200 rounded-lg">
-            <p className="text-sm text-amber-800">
-              <strong>Important:</strong> Only models with function
-              calling capabilities (tool calls) or JSON schema support
-              will work.
-            </p>
-          </div>
-          <label className="block text-sm font-medium text-gray-700 mb-2">
-            Select Model
-          </label>
+          <Alert className="mb-3 border-amber-200 bg-amber-50/50 dark:border-amber-900 dark:bg-amber-950/20">
+            <AlertDescription className="text-amber-800 dark:text-amber-200">
+              <strong>Wichtig:</strong> Nur Modelle mit Function-Calling-Fähigkeiten (Tool Calls) oder JSON-Schema-Unterstützung funktionieren.
+            </AlertDescription>
+          </Alert>
+          <Label>
+            Modell auswählen
+          </Label>
           <div className="w-full">
             <Popover
               open={openModelSelect}

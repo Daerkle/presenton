@@ -11,7 +11,7 @@ const marketSizeSlideSchema = z.object({
   title: z.string().min(3).max(15).default("Market Size").meta({
     description: "Main slide title",
   }),
-  companyName: z.string().min(2).max(50).default("presenton").meta({
+  companyName: z.string().min(2).max(50).default("SCHWARM").meta({
     description: "Company name displayed in header",
   }),
   date: z.string().min(5).max(50).default("June 13, 2038").meta({
@@ -87,13 +87,13 @@ const MarketSizeSlideLayout: React.FC<MarketSizeSlideProps> = ({
       />
 
       <div
-        className="w-full rounded-sm max-w-[1280px] shadow-lg max-h-[720px] aspect-video bg-white relative z-20 mx-auto overflow-hidden"
+        className="w-full rounded-sm max-w-[1280px] shadow-lg max-h-[720px] aspect-video bg-white dark:bg-gray-900 relative z-20 mx-auto overflow-hidden"
         style={{
           fontFamily: "Montserrat, sans-serif",
         }}
       >
         {/* Header */}
-        <div className="absolute top-8 left-10 right-10 flex justify-between items-center text-[#1E4CD9] text-sm font-semibold">
+        <div className="absolute top-8 left-10 right-10 flex justify-between items-center text-blue-600 dark:text-blue-400 text-sm font-semibold">
           <span>{slideData?.companyName || "Rimberio"}</span>
           <span>{slideData?.date || "June 13, 2038"}</span>
         </div>
@@ -110,7 +110,7 @@ const MarketSizeSlideLayout: React.FC<MarketSizeSlideProps> = ({
               >
                 {slideData?.title || "Market Size"}
               </h1>
-              <div className="w-full bg-[#CBE3CC] rounded-md mb-8 flex items-center justify-center">
+              <div className="w-full bg-green-100 dark:bg-green-900/30 rounded-md mb-8 flex items-center justify-center">
                 {slideData?.mapImage?.__image_url__ && (
                   <img
                     src={slideData?.mapImage?.__image_url__}
@@ -134,14 +134,14 @@ const MarketSizeSlideLayout: React.FC<MarketSizeSlideProps> = ({
               {stats.map((stat, index) => (
                 <div key={index}>
                   <div className="space-y-2">
-                    <div className="bg-[#1E4CD9] text-white text-sm font-semibold px-3 py-1 inline-block rounded-sm">
+                    <div className="bg-blue-600 dark:bg-blue-500 text-white dark:text-gray-100 text-sm font-semibold px-3 py-1 inline-block rounded-sm">
                       <span className="text-sm">{stat.label}</span>
                     </div>
-                    <div className="text-2xl font-bold text-[#1E4CD9]">
+                    <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">
                       {stat.value}
                     </div>
                   </div>
-                  <p className="text-sm text-gray-700 leading-snug">
+                  <p className="text-sm text-gray-700 dark:text-gray-300 leading-snug">
                     {stat.description}
                   </p>
                 </div>

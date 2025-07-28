@@ -13,7 +13,7 @@ const thankYouSlideSchema = z.object({
   subtitle: z.string().min(0).max(100).default("").meta({
     description: "Optional subtitle or closing remark",
   }),
-  companyName: z.string().min(2).max(50).default("presenton").meta({
+  companyName: z.string().min(2).max(50).default("SCHWARM").meta({
     description: "Company name displayed in header",
   }),
   date: z.string().min(5).max(50).default("June 13, 2038").meta({
@@ -56,14 +56,13 @@ const ThankYouSlideLayout: React.FC<ThankYouSlideLayoutProps> = ({ data }) => {
       />
 
       <div
-        className="w-full rounded-sm max-w-[1280px] shadow-lg max-h-[720px] aspect-video relative z-20 mx-auto overflow-hidden flex flex-col"
+        className="w-full rounded-sm max-w-[1280px] shadow-lg max-h-[720px] aspect-video bg-blue-600 dark:bg-blue-500 relative z-20 mx-auto overflow-hidden flex flex-col"
         style={{
           fontFamily: "Montserrat, sans-serif",
-          backgroundColor: "#1E4CD9", // blue background
         }}
       >
         {/* Header */}
-        <div className="absolute top-8 left-10 right-10 flex justify-between items-center text-white text-sm font-semibold">
+        <div className="absolute top-8 left-10 right-10 flex justify-between items-center text-white dark:text-gray-100 text-sm font-semibold">
           <span>{data?.companyName || "Rimberio"}</span>
           <span>{data?.date || "June 13, 2038"}</span>
         </div>
@@ -72,7 +71,7 @@ const ThankYouSlideLayout: React.FC<ThankYouSlideLayoutProps> = ({ data }) => {
         <div className="flex flex-1 flex-col px-16 pb-16 justify-between">
           {/* Thank You and description */}
           <div className="flex flex-col items-start w-full pt-16">
-            <h1 className="font-bold text-8xl text-white mb-6 mt-8 text-left w-full">
+            <h1 className="font-bold text-8xl text-white dark:text-gray-100 mb-6 mt-8 text-left w-full">
               {data?.title || "Thank You!"}
             </h1>
             {data?.subtitle && (
@@ -87,7 +86,7 @@ const ThankYouSlideLayout: React.FC<ThankYouSlideLayoutProps> = ({ data }) => {
             {/* Left: We are ready to assist you */}
             <div className="flex flex-col">
               <div
-                className="font-bold text-white text-left mb-3"
+                className="font-bold text-white dark:text-gray-100 text-left mb-3"
                 style={{
                   fontSize: "2rem",
                   marginBottom: 0,
@@ -97,7 +96,7 @@ const ThankYouSlideLayout: React.FC<ThankYouSlideLayoutProps> = ({ data }) => {
               </div>
             </div>
             {/* Right: Contacts */}
-            <div className="flex flex-col items-end text-white text-sm space-y-2 min-w-[220px]">
+            <div className="flex flex-col items-end text-white dark:text-gray-100 text-sm space-y-2 min-w-[220px]">
               <div className="flex items-center gap-2">
                 <span role="img" aria-label="address">
                   📍
@@ -127,7 +126,7 @@ const ThankYouSlideLayout: React.FC<ThankYouSlideLayoutProps> = ({ data }) => {
         </div>
 
         {/* Bottom border line */}
-        <div className="absolute bottom-0 left-0 w-full h-1 bg-white"></div>
+        <div className="absolute bottom-0 left-0 w-full h-1 bg-white dark:bg-gray-100"></div>
       </div>
     </>
   );

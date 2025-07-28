@@ -139,10 +139,10 @@ export default function Home() {
         {/* Branding Header */}
         <div className="text-center mb-2 mt-4 flex-shrink-0">
           <div className="flex items-center justify-center gap-3 mb-2">
-            <img src="/Logo.png" alt="Presenton Logo" className="h-12" />
+            <img src="/Logo.png" alt="SCHWARM Logo" className="h-12" />
           </div>
-          <p className="text-gray-600 text-sm">
-            Open-source AI presentation generator
+          <p className="text-gray-600 dark:text-gray-400 text-sm">
+            Open-Source KI-Präsentationsgenerator
           </p>
         </div>
 
@@ -159,8 +159,8 @@ export default function Home() {
 
       {/* Download Progress Modal */}
       {showDownloadModal && downloadingModel && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-          <div className="bg-white/95 backdrop-blur-md rounded-xl shadow-2xl max-w-md w-full p-6 relative">
+        <div className="fixed inset-0 bg-black/50 dark:bg-black/70 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-md rounded-xl shadow-2xl max-w-md w-full p-6 relative">
             {/* Modal Content */}
             <div className="text-center">
               {/* Icon */}
@@ -173,12 +173,12 @@ export default function Home() {
               </div>
 
               {/* Title */}
-              <h3 className="text-lg font-semibold text-gray-900 mb-2">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
                 {downloadingModel.done ? "Download Complete!" : "Downloading Model"}
               </h3>
 
               {/* Model Name */}
-              <p className="text-sm text-gray-600 mb-6">
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
                 {llmConfig.OLLAMA_MODEL}
               </p>
 
